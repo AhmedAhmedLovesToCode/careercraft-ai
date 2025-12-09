@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-50 antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl border border-slate-800/60 bg-slate-900/70 
+           p-6 shadow-xl shadow-black/60 animate-card-fade;
+  }
+
+  .glass-card::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/30 via-purple-500/10 to-sky-500/30 opacity-0 transition-opacity duration-500;
+  }
+
+  .glass-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .output-area {
+    @apply mt-4 max-h-80 overflow-y-auto rounded-xl border border-slate-700/70 bg-slate-950/80 p-3 text-sm leading-relaxed text-slate-100;
+  }
+}
