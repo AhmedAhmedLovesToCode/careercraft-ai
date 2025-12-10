@@ -70,7 +70,7 @@ export default function ResumeTailor(){
             <textarea
                 rows={7}
                 className="mb-3 w-full rounded-xl border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm text-slate-100 outline-none ring-indigo-500/50 transition-all placeholder:text-slate-500 focus:border-indigo-500 focus:ring-1"
-                placeholder="Paste your resume text here (export from PDF or copy from your doc)..."
+                placeholder="Paste your resume text here (copy from your doc)..."
                 value={resumeText}
                 onChange={(e) => setResumeText(e.target.value)}
             />
